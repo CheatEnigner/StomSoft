@@ -18,9 +18,9 @@ def on_release(key):
         pass
 
 def main():
-    global lunar
-    lunar = Aimbot(collect_data = "collect_data" in sys.argv)
-    lunar.start()
+    global custom
+    custom = Aimbot(collect_data = "collect_data" in sys.argv)
+    custom.start()
 
 def setup():
     path = "lib/config"
