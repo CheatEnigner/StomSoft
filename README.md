@@ -10,7 +10,7 @@ open requirments.bat
 
 ## Usage
 ```           
-python aimassist.py (make sure to type this in correct directory)
+python Cheat.py (make sure to type this in correct directory)
 ```
 
 ## Better AimAssist
