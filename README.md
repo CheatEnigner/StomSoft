@@ -10,7 +10,7 @@ open requirments.bat
 
 ## Usage
 ```           
-python Cheat.py (make sure to type this in correct directory)
+python StomSoft.py (make sure to type this in correct directory)
 ```
 
 ## Better AimAssist
@@ -20,4 +20,4 @@ and find best.pt and just replace it
 
 ## Custom Resolution
 if you are using custom resolution go to lib click aimAssist.py
-find 960 and 540 res and change if you are using 1720 x 1080 and divide it by 2 
+find 960 and 540 res and change (if you are using 1720 x 1080 and divide it by 2)!!!! 
