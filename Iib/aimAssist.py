@@ -61,7 +61,7 @@ class Aimbot:
         #controls the initial centered box width and height of the "Lunar Vision" window
         self.box_constant = box_constant #controls the size of the detection box (equaling the width and height)
 
-        print("[INFO] Loading AimAssist")
+        print("[INFO] Loading the neural network model")
         self.model = torch.hub.load('ultralytics/yolov5', 'custom', path='lib/best.pt', force_reload = True)
         if torch.cuda.is_available():
             print(colored("CUDA ACCELERATION [ENABLED]", "green"))
@@ -69,13 +69,13 @@ class Aimbot:
             print(colored("[!] CUDA ACCELERATION IS UNAVAILABLE", "red"))
             print(colored("[!] Check your PyTorch installation, else performance will be poor", "red"))
 
-        self.model.conf = 0.65 # base confidence threshold (or base detection (0-1)
-        self.model.iou = 0.65 # NMS IoU (0-1)
+        self.model.conf = 0.45 # base confidence threshold (or base detection (0-1)
+        self.model.iou = 0.45 # NMS IoU (0-1)
         self.collect_data = collect_data
         self.mouse_delay = mouse_delay
         self.debug = debug
 
-        print("\n[INFO] PRESS 'F1' TO TOGGLE AIMASSIST\n[INFO] PANIC BUTTON F2")
+        print("\n[INFO] PRESS 'F1' TO TOGGLE AIMBOT\n[INFO] PRESS 'F9' TO QUIT")
 
     def update_status_aimbot():
         if Aimbot.aimbot_status == colored("ENABLED", 'green'):
@@ -83,7 +83,7 @@ class Aimbot:
         else:
             Aimbot.aimbot_status = colored("ENABLED", 'green')
         sys.stdout.write("\033[K")
-        print(f"[!] AIMASSIST IS [{Aimbot.aimbot_status}]", end = "\r")
+        print(f"[!] AIMBOT IS [{Aimbot.aimbot_status}]", end = "\r")
 
     def left_click():
         ctypes.windll.user32.mouse_event(0x0002) #left mouse down
@@ -208,13 +208,13 @@ class Aimbot:
                 collect_pause = time.perf_counter()
             
             cv2.putText(frame, f"FPS: {int(1/(time.perf_counter() - start_time))}", (5, 30), cv2.FONT_HERSHEY_DUPLEX, 1, (113, 116, 244), 2)
-            cv2.imshow("PLP Vision", frame)
+            cv2.imshow("Vision", frame)
             if cv2.waitKey(1) & 0xFF == ord('0'):
                 break
 
     def clean_up():
-        print("\n[INFO] F2 WAS PRESSED. QUITTING...")
+        print("\n[INFO] F9 WAS PRESSED. QUITTING...")
         Aimbot.screen.close()
         os._exit(0)
 
-if __name__ == "__main__": print("You are in the wrong directory and are running the wrong file; ")
+if __name__ == "__main__": print("You are in the wrong directory and are running the wrong file; you must run StomSoft.py")
