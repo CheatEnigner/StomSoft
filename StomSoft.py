@@ -1,4 +1,3 @@
- 
 import json
 import os
 import sys
@@ -60,7 +59,7 @@ if __name__ == "__main__":
  ___) |  |  |   | |___| || |  \ \/ /  | |  ___) | | |___| | |  _____|    |  |
 |____/   |__|   \_______/|_|   \__/   |_| |____/  \_______/ |_|          |__|
  
-(StomSoft Aimbot)''', ""))
+    (Neural Network Aimbot)''', "yellow"))
 
     path_exists = os.path.exists("lib/config/config.json")
     if not path_exists or ("setup" in sys.argv):
