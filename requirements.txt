@@ -21,12 +21,11 @@ ultralytics
 
 mss
 pygame
-pynput
-pywin32
+pynput==1.7.6
+pywin32==305
 requests
 wheel
 termcolor
 GPUtil
 py-cpuinfo
 pyautogui
-pandas
