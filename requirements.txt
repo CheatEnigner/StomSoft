@@ -1,21 +1,21 @@
 --find-links https://download.pytorch.org/whl/torch_stable.html
 
-torch==2.1.2
-torchvision==0.16.2
+torch
+torchvision
 
-matplotlib>=3.2.2
-numpy==1.23.0
-opencv-python>=4.1.2
+matplotlib
+numpy
+opencv-python
 Pillow
-PyYAML>=5.3.1
-scipy>=1.4.1
-tqdm>=4.41.0
-tensorboard>=2.4.1
-seaborn>=0.11.0
+PyYAML
+scipy
+tqdm
+tensorboard
+seaborn
 pandas
 PyQt5
 bettercam
-protobuf==4.21.0
+protobuf
 ipython
 ultralytics
 
